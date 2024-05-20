@@ -39,7 +39,7 @@ const Home = () => {
               }}
             >
               {[...Array(genereatedCount)].map((_, index) => (
-                <Image width={100} src="src/assets/crimson haze.png" />
+                <Image width={100} src="/crimson haze.png" />
               ))}
             </Image.PreviewGroup>
           )}
