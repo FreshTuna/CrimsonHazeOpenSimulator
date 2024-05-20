@@ -37,7 +37,7 @@ const ResultModal = ({
                   console.log(`current index: ${current}, prev index: ${prev}`),
               }}
             >
-              <Image width={200} src={"src/assets/crimson haze.png"} />
+              <Image width={200} src={"crimson haze.png"} />
               {boosterPackList[index].map((value, index) => (
                 <Image
                   src={value}
