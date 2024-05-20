@@ -2,6 +2,7 @@ import { InputNumber, Button, Image, Checkbox } from "antd";
 import { useState } from "react";
 import { jsx, css } from "@emotion/react";
 import ResultModal from "../../component/ResultModal";
+import { InputNumberProps } from "antd/lib/input-number";
 
 const Home = () => {
   const [count, setCount] = useState(1);
