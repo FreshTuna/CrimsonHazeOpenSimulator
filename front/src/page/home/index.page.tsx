@@ -1,6 +1,6 @@
 import { InputNumber, Button, Image, Checkbox } from "antd";
-import { useState } from "react";
-import { jsx, css } from "@emotion/react";
+import {useState} from "react";
+import { css } from "@emotion/react";
 import ResultModal from "../../component/ResultModal";
 import { InputNumberProps } from "antd/lib/input-number";
 
@@ -8,7 +8,7 @@ const Home = () => {
   const [count, setCount] = useState(1);
   const [generateYn, setGenerateYn] = useState(false);
   const [aceCardInclude, setAceCardInclude] = useState(false);
-  const [genereatedCount, setGeneratedCount] = useState(1);
+  const [generatedCount, setGeneratedCount] = useState(1);
   const [resultModalVisible, setResultModalVisible] = useState(false);
 
   const onChange: InputNumberProps["onChange"] = (value: any) => {
@@ -32,14 +32,9 @@ const Home = () => {
       <div css={boosterPackContainer}>
         <div css={boosterPackWrapper}>
           {generateYn && (
-            <Image.PreviewGroup
-              preview={{
-                onChange: (current, prev) =>
-                  console.log(`current index: ${current}, prev index: ${prev}`),
-              }}
-            >
-              {[...Array(genereatedCount)].map((_, index) => (
-                <Image width={100} src="/crimson haze.png" />
+            <Image.PreviewGroup>
+              {[...Array(generatedCount)].map((_, index) => (
+                <Image key={index} width={100} src="/crimson haze.png" />
               ))}
             </Image.PreviewGroup>
           )}
